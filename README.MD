@@ -7,22 +7,22 @@
 >  Create a new feature adding popularity to the characters retrieve from an external API.
 
 ### Key points
-* All request need to be stored, to further analyze about users intention and behavior.
-* The original api don't have any information about popularity
-* The character's will be chosen at random
+* All requests need to be stored, to further users' intention and behavior.
+* The original api doesn't have any information about popularity
+* The characters will be chosen at random
 
-> Objective is aggregate som information in the original data 
+> The objective is to aggregate some information in the original data 
 
 ### First Draft
-In this first design will be based on building blocks, each one with your own responsibility.
+This first design will be based on building blocks, each one with their own responsibility.
 
 ![Draft](doc/images/draft_v1.jpg)
 
 | Component | Responsibility | Comments |
 | ----------- | ----------- | ----------- |
-| Request Store |  Store all request made from any user | It's not a feature component, will be use to understand a client behaviour. |
+| Request Store |  Store all request made from any user | It's not a feature component, it will be used to understand a client behaviour. |
 | ID generator | Generate random character id's |  |
-| Orchestrator | Will be implement all business logic needed to complete a task |  |
+| Orchestrator | Will implement all business logic needed to complete a task |  |
 | Popularity Manager | Component to manager a popularity of all characters, storing information to identify each character and his popularity index.  |  |
 
 ### Gathering Information
@@ -53,7 +53,7 @@ Considering all the information gathered, we can create an initial version of th
 
 | Component | Responsibility | Comments |
 | ----------- | ----------- | ----------- |
-| Request Store |  Store all request made from any user | It's not a feature component, will be use to understand a client behaviour. |
+| Request Store |  Store all request made from any user | It's not a feature component, will be used to understand a client behaviour. |
 | ID generator | Generate random character id's |  |
 | Orchestrator | Will be implement all business logic needed to complete a task |  |
 | Popularity API | API to retrieve the character Popularity | 30/03 - After discussions to deepen the requirement, consensus was reached on the use of an external API.  |
