@@ -1,4 +1,4 @@
-package org.bankuish.challenge.rest.dto;
+package org.bankuish.challenge.dto;
 
 import java.net.URL;
 import java.util.Date;
@@ -18,6 +18,16 @@ public class Character {
     private List<URL> episode;
     private String url;
     private Date created;
+
+    private int popularity;
+
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
+    }
 
     public int getId() {
         return id;

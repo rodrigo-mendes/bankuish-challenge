@@ -2,7 +2,7 @@ package org.bankuish.challenge.acl.api.external;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bankuish.challenge.rest.dto.Character;
+import org.bankuish.challenge.dto.Character;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class RyckAndMortyAPIClientImpl implements RyckAndMortyAPIClient {
+public class RickAndMortyAPIClientImpl implements RickAndMortyAPIClient {
 
     @Autowired
     private RestTemplate restTemplate;

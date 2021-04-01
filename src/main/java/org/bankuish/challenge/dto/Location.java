@@ -1,4 +1,4 @@
-package org.bankuish.challenge.rest.dto;
+package org.bankuish.challenge.dto;
 
 import java.net.URL;
 import java.util.Date;
