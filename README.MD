@@ -99,7 +99,29 @@ http://localhost:8080/characters?excludes=140,99,9 - to retrieve excluding chara
 - [x] Orchestrator
 - [x] Popularity API - Pending the definition of the api to recover the popularity of the characters, for now it generates a random number between 1 and 100. It is a very simple simulator. 
 
+## Next Steps
+For next steps, we must mention some points that are still pending and that should be given some attention.
+
 ### Pending tasks
 - [ ] Define API to retrieve the popularity index
 - [ ] Define microservice infrastructure
 - [ ] Implement automated testing
+- [ ] Create the ACL layer on the external APIs, so we evolved by adding the necessary components making it more explicit.
+
+    | Component | Technology | Motivation |
+    | :-----------: | :-----------: | ----------- |
+    | Request Store      | Servlet filter + Spring | It's not a feature component, will be used to understand a client behaviour. |
+    | ID generator       | Java + Spring |  Need to generate character ids at random. |
+    | Orchestrator       | Java + Spring | Single point of orchestration of the business flow |
+    | Popularity API     | Java + Spring | External API access client |
+    | Popularity API ACL     | Java + Spring | Abstraction layer to avoid influencing external systems on our system modeling. |
+    | RickAndMorty API ACL     | Java + Spring | Abstraction layer to avoid influencing external systems on our system modeling. |
+
+- [ ] Create the OpenAPI specification for the new feature, so that it can be shared with other teams, to parallel the development (API First approach)
+- [ ] Even though the microservice infrastructure is not defined, there are points about security for the exposure of the new feature that should be addressed and consider an API Gateway to expose the API to external or internal consumers.
+- [ ] Another theme that should also be considered is the Observability 360 of microservices, due to its nature of distributed execution, we should think about themes such as logs (having a log aggregator, so that we can follow the execution through the logs, even if distributed), metrics to find out how the services are performing, their consumption of resources if they are always behaving as they should and also the use of distributed transaction traces to carry out a traceability, but functional of the transactions.
+
+### TO BE DESIGN
+This design considers the points previously raised, even though the infrastructure is not yet defined, it would be some criteria that they should consider in order to make the decision.
+
+![Components](doc/images/TO_BE.jpg)
